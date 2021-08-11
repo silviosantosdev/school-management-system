@@ -1,0 +1,12 @@
+* Que tal criar método apenas para cadastramento de endereço? Poderia ser usado tanto para alunos como para professores.
+* O mesmo pode ocorrer com outros dados que possam ser comuns, como documentação (RG, CPF) e formação acadêmica (pode ser que aluno de faculdade tenha outra graduação, ou até mesmo um mestrado em outra área (assumindo que essa classe poderá ser usada desde uma escola pequena a uma faculdade.
+* Seria uma ótima maneira de fazer algo completo e depois ir adaptando, eliminando o que não fosse necessário ao projeto  - algo como "reaproveitamento de componentes".
+* Controle de mensalidades pagas pelo aluno pode ser "reaproveitada" para computar pagamento feito a fornecedores e funcionários (o que pode ser muito útil para cálculo de férias, 13%, proporcional de férias, etc.). Ou seja, criar um método que acumule valores pagos e possa ser importado para outros, entregando saídas específicas.
+* Com relação ao salário, poderíamos criar uma classe "remuneração", "valor a pagar" (ou algum outro termo que ilustre o pagamento de alguma quantia - *que provavelmente será void*). Essa classe poderia depois ser importada para o pagamento de salários, 13º, rescisão contratual e outras situações que ilustrassem a saída de um valor para pagamento de algo. (talvez até aproveitá-la, pelo menos em parte, no pagamento a fornecedores, taxas, etc.) 
+  * Do ponto de vista contábil, se trata de uma saída de valor... Talvez esse raciocínio possa até ser útil (principalmente no tocante à construção do plano de contas...)
+  * Na verdade, a classe "salário/pagamento/despesa" será importada por várias outras, em função das particularidades de cada despesa: o pagamento de um professor difere do de outro funcionário (até mesmo professores podem ter remunerações diferentes - se bem que os campos devem ser iguais para todos, e aceitarem null quando tal condição não for preenchida...)
+* Atenção para a separação de domínios específicos para certos pacotes e classes: algo restrito ao financeiro não deve ficar junto às classes relacionadas à venda.
+* Por outro lado, cadastro de tudo o que for lançado no sistema deve ficar num só canto (desde plano de contas até lista de produtos de determinado fornecedor)
+
+* novo tópico... (continuar vídeo a partir de 42:00)  => https://www.youtube.com/watch?v=e0X00EoFQbE&t=14s
+
